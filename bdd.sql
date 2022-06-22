@@ -1,0 +1,1 @@
+SELECT * FROM sae24.capteur;
