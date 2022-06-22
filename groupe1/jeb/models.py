@@ -8,22 +8,24 @@
 from django.db import models
 
 
-class Capteur(models.Model):
-    numero = models.AutoField(primary_key=True)
+class sensors(models.Model):
+    id = models.AutoField(primary_key=True)
+    macaddr = models.CharField(max_length=45, blank=True)
     piece = models.CharField(max_length=45)
     emplacement = models.CharField(max_length=45, blank=True, null=True)
     nom = models.CharField(max_length=45, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'capteur'
+        db_table = 'sensors'
 
 
-class Donnee(models.Model):
-    numero = models.OneToOneField(Capteur, models.DO_NOTHING, db_column='numero', primary_key=True)
-    timestomp = models.DateTimeField(unique=True)
-    temperature = models.IntegerField()
+class sensors_data(models.Model):
+    id = models.AutoField(primary_key=True)
+    sensors_id = models.OneToOneField(sensors, models.DO_NOTHING, db_column='macaddr')
+    datetime = models.DateTimeField(unique=True)
+    temp = models.IntegerField()
 
     class Meta:
         managed = False
-        db_table = 'donnee'
+        db_table = 'sensors_data'

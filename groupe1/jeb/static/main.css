@@ -1,0 +1,35 @@
+ {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+h1 {
+text-align: center;
+}
+table{
+border-collapse: collapse;
+margin-top:50px;
+margin-left: 30%;
+}
+table > tbody > tr > th, table > tbody > tr > td{
+padding:20px;
+border:1px solid black;
+background:white;
+font-family:tahoma;
+width:100px;
+text-align:center;
+}
+table > tbody > tr > th{
+background:grey;
+color: black;
+font-size:18px;
+}
+
+header {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+padding: 30px 10%;
+background-color: grey;
+}

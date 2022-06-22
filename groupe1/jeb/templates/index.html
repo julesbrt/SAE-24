@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block content %}
+ <h1> Liste des donnees: </h1>
+  {% if count == 0 %}
+  {% else %}
+
+
+<table>
+  <tr>
+    <th> Adresse </th>
+    <th> piece </th>
+    <th> emplacement </th>
+    <th> nom </th>
+    <th> date </th>
+    <th> temperature </th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td> {{i.macaddr}} </td>
+    <td> {{i.piece}} </td>
+    <td> {{i.emplacement}} </td>
+    <td> {{i.nom}} </td>
+    <td> {{i.datetime}} </td>
+    <td> {{i.temp}} </td>
+  </tr>
+  {% endfor %}
+  {% endif %}
+</table>
+
+{% endblock content %}

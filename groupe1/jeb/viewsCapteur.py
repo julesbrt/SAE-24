@@ -1,6 +1,7 @@
 from django.forms import model_to_dict
 from django.shortcuts import render
-
+from . import models
+from .forms import CapteurForm
 from groupe1.jeb.models import Capteur
 
 def info(request):
