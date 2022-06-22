@@ -4,9 +4,12 @@
   {% if count == 0 %}
   {% else %}
 
-
+<nav>
+  <a href="donnee/info.html">Info</a>
+</nav>
 <table>
   <tr>
+    <th> ID </th>
     <th> Adresse </th>
     <th> piece </th>
     <th> emplacement </th>
@@ -16,12 +19,13 @@
   </tr>
   {% for i in data %}
   <tr>
+    <td> {{i.id}} </td>
     <td> {{i.macaddr}} </td>
     <td> {{i.piece}} </td>
     <td> {{i.emplacement}} </td>
     <td> {{i.nom}} </td>
-    <td> {{i.datetime}} </td>
-    <td> {{i.temp}} </td>
+    <td> {{i.sensors_data.datetime}} </td>
+    <td> {{i.sensors_data.temp}} </td>
   </tr>
   {% endfor %}
   {% endif %}

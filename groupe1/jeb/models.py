@@ -22,7 +22,7 @@ class sensors(models.Model):
 
 class sensors_data(models.Model):
     id = models.AutoField(primary_key=True)
-    sensors_id = models.OneToOneField(sensors, models.DO_NOTHING, db_column='macaddr')
+    sensors_id = models.OneToOneField(sensors, models.DO_NOTHING, db_column='sensor_id')
     datetime = models.DateTimeField(unique=True)
     temp = models.IntegerField()
 
