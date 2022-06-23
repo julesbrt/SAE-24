@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'groupe1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'temp',
+        'NAME': 'groupe1b',
         'USER': 'toto',
         'HOST': 'localhost',
         'PASSWORD': 'toto',

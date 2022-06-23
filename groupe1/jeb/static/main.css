@@ -1,3 +1,41 @@
+
+html {
+margin : 0px;
+font-family: 'Montserrat', sans-serif;
+}
+
+body {
+margin : 0px;
+}
+nav {
+background-color: black;
+height: 50px;
+}
+
+nav > a {
+margin-top: 20px;
+margin: 2%;
+font-size: 30px;
+color: white;
+text-decoration: none;
+}
+.navindex {
+margin-top: 20%;
+background-color: black;
+height: 100px;
+}
+
+.navindex > a {
+margin-left: 10%;
+font-size: 80px;
+color: white;
+text-decoration: none;
+}
+
+
+
+
+
  {
 box-sizing: border-box;
 margin: 0;
