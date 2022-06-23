@@ -1,23 +1,22 @@
 {% extends "main.html" %}
 {% block content %}
- <h1> Liste des donnees: </h1>
-  {% if count1 == 0 %}
-  {% else %}
 
 
+<nav>
+  <a href="/">Home</a>
+</nav>
 <table>
-  <tr>
-    <th> date </th>
-    <th> temp </th>
-
-  </tr>
-  {% for i in data1 %}
-  <tr>
-    <td> {{i.sensors_data.datetime}} </td>
-    <td> {{i.sensors_data.temp}} </td>
-  </tr>
-  {% endfor %}
-  {% endif %}
+    <tr>
+        <th>MAC</th>
+        <th>Pièce</th>
+    </tr>
+    {% for sensor in sensors %}
+    <tbody>
+    <tr>
+        <td>{{sensor.macaddr}} </td>
+        <td>{{sensor.piece}}<a href="/capteur/update.html/{{l.id}}">Mise à jour</a></td>
+    </tr>
+    {% endfor %}
 </table>
 
 {% endblock content %}

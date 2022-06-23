@@ -1,13 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infos Donnée</title>
-</head>
-<body>
-    ici info des données
-    
-</body>
-</html>
+{% extends "main.html" %}
+{% block content %}
+
+<META HTTP-EQUIV="Refresh" CONTENT="3; info.html">
+
+<nav>
+  <a href="/">Home</a>
+</nav>
+
+<table>
+
+    <tr>
+        <th>Mac</th>
+        <th>Nom</th>
+        <th>Date</th>
+        <th>Pièce</th>
+        <th>Emplacement</th>
+        <th>Temp</th>
+    </tr>
+
+    {% for i in data %}
+    <tr>
+        <td>{{i.sensor.macaddr}}</td>
+        <td>{{i.sensor.nom}}</td>
+        <td>{{i.datetime}}</td>
+        <td>{{i.sensor.piece}}</td>
+        <td>{{i.sensor.emplacement}}</td>
+        <td>{{i.temp}}</td>
+
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock content %}

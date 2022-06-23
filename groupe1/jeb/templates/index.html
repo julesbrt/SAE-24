@@ -1,34 +1,11 @@
 {% extends "main.html" %}
 {% block content %}
- <h1> Liste des donnees: </h1>
-  {% if count == 0 %}
-  {% else %}
+
 
 <nav>
   <a href="donnee/info.html">Info</a>
+    <a href="capteur/info.html">Info</a>
 </nav>
-<table>
-  <tr>
-    <th> ID </th>
-    <th> Adresse </th>
-    <th> piece </th>
-    <th> emplacement </th>
-    <th> nom </th>
-    <th> date </th>
-    <th> temperature </th>
-  </tr>
-  {% for i in data %}
-  <tr>
-    <td> {{i.id}} </td>
-    <td> {{i.macaddr}} </td>
-    <td> {{i.piece}} </td>
-    <td> {{i.emplacement}} </td>
-    <td> {{i.nom}} </td>
-    <td> {{i.sensors_data.datetime}} </td>
-    <td> {{i.sensors_data.temp}} </td>
-  </tr>
-  {% endfor %}
-  {% endif %}
-</table>
+
 
 {% endblock content %}
