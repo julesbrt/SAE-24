@@ -2,12 +2,11 @@
 {% block content %}
 
 <div class="content">
-    <h1>Mise à jour de l'emplacement</h1>
-        <form method="post" action="/updatetraitement/{{id}}/">
+    <h1>Mise à jour </h1>
+        <form method="post" action="/capteur/info/{{id}}">
             {% csrf_token %}
             {{form.as_ul}}
             <input type="submit" value="Envoyer les données"/>
         </form>
 </div>
-
 {% endblock content %}
